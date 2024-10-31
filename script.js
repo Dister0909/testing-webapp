@@ -13,54 +13,7 @@ let thickness = document.getElementById("thickness");
 let price_stone = document.getElementById("price_stone");
 let price_primer = document.getElementById("price_primer");
 
-area.addEventListener("change", function() {
-    if (area.value != '' && thickness.value != '' && price_stone.value != '' && price_primer.value != '') {
-        if (!tg.MainButton.isVisible) {
-            tg.MainButton.show();
-        }
-    } else {
-        if (tg.MainButton.isVisible) {
-            tg.MainButton.hide();
-        }
-    }
-});
-
-thickness.addEventListener("change", function() {
-    if (area.value != '' && thickness.value != '' && price_stone.value != '' && price_primer.value != '') {
-        if (!tg.MainButton.isVisible) {
-            tg.MainButton.show();
-        }
-    } else {
-        if (tg.MainButton.isVisible) {
-            tg.MainButton.hide();
-        }
-    }
-});
-
-price_stone.addEventListener("change", function() {
-    if (area.value != '' && thickness.value != '' && price_stone.value != '' && price_primer.value != '') {
-        if (!tg.MainButton.isVisible) {
-            tg.MainButton.show();
-        }
-    } else {
-        if (tg.MainButton.isVisible) {
-            tg.MainButton.hide();
-        }
-    }
-});
-
-price_primer.addEventListener("change", function() {
-    if (area.value != '' && thickness.value != '' && price_stone.value != '' && price_primer.value != '') {
-        if (!tg.MainButton.isVisible) {
-            tg.MainButton.show();
-        }
-    } else {
-        if (tg.MainButton.isVisible) {
-            tg.MainButton.hide();
-        }
-    }
-});
-
+tg.MainButton.show();
 
 Telegram.WebApp.onEvent('mainButtonClicked', function(){
     sendData = area.value + "$" + thickness.value + "$" + price_stone.value + "$" + price_primer.value + "&";
